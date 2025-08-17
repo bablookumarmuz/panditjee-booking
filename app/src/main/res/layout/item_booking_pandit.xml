@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:layout_marginBottom="8dp"
+    android:elevation="4dp">
+
+    <TextView
+        android:id="@+id/tvPujaName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Puja Name"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/tvPujaDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date &amp; Time"
+        android:textSize="14sp"
+        android:paddingTop="4dp"/>
+
+    <TextView
+        android:id="@+id/tvPujaPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₹1000"
+        android:textSize="16sp"
+        android:paddingTop="4dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="8dp">
+
+        <Button
+            android:id="@+id/btnAccept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Accept"
+            android:backgroundTint="@android:color/holo_green_dark"/>
+
+        <Button
+            android:id="@+id/btnDecline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Decline"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:layout_marginStart="12dp"/>
+
+    </LinearLayout>
+</LinearLayout>

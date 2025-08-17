@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDF4FF">
+
+    <!-- Top Greeting Section -->
+    <LinearLayout
+        android:id="@+id/headerSection"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/greetingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome, BABLOO KUMAR"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/cityText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📍 Delhi"
+            android:textColor="#555555"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Search + Filter -->
+    <LinearLayout
+        android:id="@+id/searchFilterLayout"
+        android:layout_below="@id/headerSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <EditText
+            android:id="@+id/searchBar"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Search services..."
+            android:background="@drawable/search_edittext_bg"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:drawablePadding="8dp"
+            android:paddingHorizontal="12dp"
+            android:backgroundTint="#EDEDED" />
+
+        <ImageButton
+            android:id="@+id/filterBtn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_filter"
+            android:backgroundTint="#FFA726"
+            android:layout_marginStart="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <!-- Featured Services -->
+    <TextView
+        android:id="@+id/featuredLabel"
+        android:layout_below="@id/searchFilterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Featured Services"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="8dp"
+        android:textSize="16sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/featuredRecyclerView"
+        android:layout_below="@id/featuredLabel"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="8dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!-- Your Bookings Label -->
+    <TextView
+        android:id="@+id/bookingsLabel"
+        android:layout_below="@id/featuredRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Bookings"
+        android:textStyle="bold"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp" />
+
+    <!-- Your Bookings List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/bookingsRecycler"
+        android:layout_below="@id/bookingsLabel"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottomNav"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="16dp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        app:itemIconTint="@color/bottom_nav_selector"
+        app:itemTextColor="@color/bottom_nav_selector"
+        app:menu="@menu/bottom_nav_menu" />
+
+</RelativeLayout>

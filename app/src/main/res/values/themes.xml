@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base app theme -->
+    <style name="Theme.PanditJeeBooking" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- App brand colors -->
+        <item name="colorPrimary">#FFA726</item> <!-- Saffron -->
+        <item name="colorPrimaryVariant">#FB8C00</item> <!-- Darker saffron -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+
+        <item name="colorSecondary">#FFEB3B</item> <!-- Golden yellow -->
+        <item name="colorOnSecondary">#000000</item>
+
+        <!-- App background -->
+        <item name="android:windowBackground">@drawable/hindu_theme_bg</item>
+
+        <!-- System bars (optional) -->
+        <item name="android:statusBarColor" tools:targetApi="l">#FB8C00</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">#FFA726</item>
+
+        <!-- Disable force dark -->
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+    </style>
+
+</resources>

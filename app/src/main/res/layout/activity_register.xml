@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="@drawable/hindu_theme_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Role Selection -->
+        <RadioGroup
+            android:id="@+id/roleToggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <RadioButton
+                android:id="@+id/userRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User"
+                android:checked="true"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/panditRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pandit"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp" />
+        </RadioGroup>
+
+        <!-- Common Fields -->
+        <EditText
+            android:id="@+id/nameEdit"
+            android:hint="Full Name"
+            style="@style/EditTextStyle" />
+
+        <EditText
+            android:id="@+id/emailEdit"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            style="@style/EditTextStyle" />
+
+        <EditText
+            android:id="@+id/phoneEdit"
+            android:hint="Phone Number"
+            android:inputType="phone"
+            style="@style/EditTextStyle" />
+
+        <!-- Password with toggle -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <EditText
+                android:id="@+id/passwordEdit"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/togglePassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_visibility_off"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp" />
+        </RelativeLayout>
+
+        <!-- Confirm Password with toggle -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp">
+
+            <EditText
+                android:id="@+id/confirmPasswordEdit"
+                android:hint="Confirm Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:backgroundTint="#FFFFFF"
+                android:textColor="#000000"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/toggleConfirmPassword"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_visibility_off"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp" />
+        </RelativeLayout>
+
+        <!-- Pandit-only fields -->
+        <EditText
+            android:id="@+id/experienceEdit"
+            android:hint="Experience (in years)"
+            android:visibility="gone"
+            style="@style/EditTextStyle" />
+
+        <EditText
+            android:id="@+id/cityEdit"
+            android:hint="City"
+            android:visibility="gone"
+            style="@style/EditTextStyle" />
+
+        <EditText
+            android:id="@+id/servicesEdit"
+            android:hint="Services Offered (comma separated)"
+            android:visibility="gone"
+            style="@style/EditTextStyle" />
+
+        <!-- Register Button -->
+        <Button
+            android:id="@+id/registerBtn"
+            android:text="Register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#FFA726"
+            android:textColor="@android:color/white" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <!-- Redirect to Login -->
+        <TextView
+            android:id="@+id/loginLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? Login"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"
+            android:clickable="true"
+            android:focusable="true" />
+    </LinearLayout>
+</ScrollView>

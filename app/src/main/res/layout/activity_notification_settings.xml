@@ -1,0 +1,19 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/switchBookingNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Booking Notifications" />
+
+    <Switch
+        android:id="@+id/switchOffersNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Offers &amp; Promotions Notifications" />
+
+</LinearLayout>

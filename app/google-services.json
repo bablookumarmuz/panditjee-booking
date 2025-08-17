@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "634291538323",
+    "project_id": "panditjee-booking-970a2",
+    "storage_bucket": "panditjee-booking-970a2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634291538323:android:025a1aff2d274e89f38066",
+        "android_client_info": {
+          "package_name": "com.bablookumar.panditjeebooking"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "634291538323-c405aqt4ugbt6cqj4p6s5dd7ksb4kthn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bablookumar.panditjeebooking",
+            "certificate_hash": "4022131069e233cc9f6227f4f238991d1439567e"
+          }
+        },
+        {
+          "client_id": "634291538323-qelsueih9aim6vv1tqhfpf6tc4p103sk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYZhv6CDkGrZolhpsSGNK4bc7gS05eDjM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634291538323-qelsueih9aim6vv1tqhfpf6tc4p103sk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

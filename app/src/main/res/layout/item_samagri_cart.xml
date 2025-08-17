@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    android:layout_marginHorizontal="8dp"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/samagriItemImage"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:contentDescription="Samagri Image" />
+
+        <TextView
+            android:id="@+id/samagriItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/samagriItemImage"
+            android:layout_marginStart="12dp"
+            android:text="Samagri Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/samagriItemPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/samagriItemName"
+            android:layout_toEndOf="@id/samagriItemImage"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="4dp"
+            android:text="₹100"
+            android:textSize="15sp"
+            android:textColor="#4CAF50"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/samagriItemImage"
+            android:layout_toEndOf="@id/samagriItemImage"
+            android:layout_marginStart="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/decrementBtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#DDDDDD"
+                android:src="@android:drawable/ic_delete"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Decrease" />
+
+            <TextView
+                android:id="@+id/quantityText"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="8dp" />
+
+            <ImageButton
+                android:id="@+id/incrementBtn"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:backgroundTint="#DDDDDD"
+                android:src="@android:drawable/ic_input_add"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Increase" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

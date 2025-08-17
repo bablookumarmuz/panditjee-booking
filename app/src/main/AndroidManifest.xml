@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Required permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:roundIcon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PanditJeeBooking">
+
+        <!-- Razorpay: Force light no-action-bar theme -->
+        <activity
+            android:name="com.razorpay.CheckoutActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            tools:replace="android:theme" />
+
+        <!-- Splash Screen -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ForgotPasswordActivity"
+            android:exported="true" />
+
+        <!-- Home & Details -->
+        <activity
+            android:name=".UserHomeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PujaDetailActivity"
+            android:exported="true" />
+
+        <!-- Cart & Payments -->
+        <activity
+            android:name=".CartActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".OrderConfirmationActivity"
+            android:exported="true" />
+
+        <!-- Samagri -->
+        <activity
+            android:name=".SamagriActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SamagriCartActivity"
+            android:exported="true" />
+
+        <!-- Profile & History (User side) -->
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BookingHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SamagriOrderHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".NotificationSettingsActivity"
+            android:exported="true" />
+
+        <!-- Pandit side -->
+        <activity
+            android:name=".pandit.PanditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PanditBookingHistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PanditEditProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".PanditSettingsActivity"
+            android:exported="true" />
+
+    </application>
+
+</manifest>

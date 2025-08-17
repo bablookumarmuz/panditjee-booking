@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:background="#FFF7F0">
+
+    <!-- Success Icon -->
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_check_circle"
+        android:drawableTint="#4CAF50" />
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Order Confirmed!"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="You can view your order in the Order History section."
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        android:textColor="#555"
+        android:gravity="center" />
+
+    <!-- Go Home Button -->
+    <Button
+        android:id="@+id/goHomeBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Go Home"
+        android:backgroundTint="#A84300"
+        android:textColor="#fff" />
+
+</LinearLayout>
